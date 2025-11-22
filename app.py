@@ -41,3 +41,37 @@ def recommend(movie, num_recommendations=5):
         recommended_movie_names.append(movie_title)
 
     return recommended_movie_names, recommended_movie_posters
+
+st.header('Movie Recommender System')
+movies = pickle.load(open('model/movie_list.pkl','rb'))
+similarity = pickle.load(open('model/similarity.pkl','rb'))
+
+movie_list = movies['title'].values
+selected_movie = st.selectbox(
+    "Type or select a movie from the dropdown",
+    movie_list
+)
+
+# Add slider for number of recommendations
+num_recommendations = st.slider(
+    "How many recommendations do you want?",
+    min_value=5,
+    max_value=20,
+    value=10,
+    step=5
+)
+
+if st.button('Show Recommendation'):
+    recommended_movie_names, recommended_movie_posters = recommend(selected_movie, num_recommendations)
+    
+    st.subheader(f"Top {num_recommendations} Recommendations for '{selected_movie}'")
+    
+    # Display movies in rows of 5
+    for row_start in range(0, len(recommended_movie_names), 5):
+        cols = st.columns(5)
+        for idx, col in enumerate(cols):
+            movie_idx = row_start + idx
+            if movie_idx < len(recommended_movie_names):
+                with col:
+                    st.image(recommended_movie_posters[movie_idx])
+                    st.text(recommended_movie_names[movie_idx])
