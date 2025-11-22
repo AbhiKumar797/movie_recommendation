@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# VS Code
+.vscode/
+
+# Large model files
+model/similarity.pkl
