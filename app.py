@@ -26,3 +26,18 @@ def fetch_poster(movie_id):
     
     return "https://via.placeholder.com/500x750.png?text=No+Poster+Available"
 
+def recommend(movie, num_recommendations=5):
+    index = movies[movies['title'] == movie].index[0]
+    distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
+    recommended_movie_names = []
+    recommended_movie_posters = []
+    
+    for i in distances[1:num_recommendations+1]:
+        # fetch the movie poster
+        movie_id = movies.iloc[i[0]].movie_id
+        movie_title = movies.iloc[i[0]].title
+        
+        recommended_movie_posters.append(fetch_poster(movie_id))
+        recommended_movie_names.append(movie_title)
+
+    return recommended_movie_names, recommended_movie_posters
