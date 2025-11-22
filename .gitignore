@@ -12,3 +12,4 @@ venv/
 
 # Large model files
 model/similarity.pkl
+model/movie_list.pkl
