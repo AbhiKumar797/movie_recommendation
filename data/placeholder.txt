@@ -1,0 +1,6 @@
+This folder should contain the raw data files used by the notebook.
+You can download them from Kaggle: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+The required files are:
+- tmdb_5000_credits.csv
+- tmdb_5000_movies.csv
