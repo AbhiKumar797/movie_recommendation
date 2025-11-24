@@ -1,0 +1,57 @@
+.header {
+  background: linear-gradient(to right, #eef2f3, #e0eafc); /* Subtle gradient */
+  color: #333;
+  padding: 25px 20px; /* Increased padding */
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06); /* Slightly stronger shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '🍿';
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  font-size: 60px;
+  opacity: 0.1;
+  transform: rotate(-15deg);
+}
+
+.header::after {
+  content: '🎟️';
+  position: absolute;
+  bottom: -30px;
+  right: 12%;
+  font-size: 70px;
+  opacity: 0.1;
+  transform: rotate(15deg);
+}
+
+.header-content h1 {
+  font-size: 2.2rem; /* Slightly larger font */
+  margin-bottom: 8px;
+  font-weight: 700; /* Bolder */
+  color: #0056b3; /* Dark blue color for title */
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .header::before, .header::after {
+    display: none; /* Hide icons on small screens */
+  }
+}
