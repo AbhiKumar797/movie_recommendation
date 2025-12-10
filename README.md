@@ -9,8 +9,10 @@ A comprehensive movie recommendation system that suggests similar movies based o
 > You can upload a video to GitHub or use platforms like YouTube/Loom and embed the link below:
 > 
 > ```markdown
-> [![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-> ```
+> ## 📹 Video Showcase
+
+[![Watch the Demo](https://img.youtube.com/vi/cGblISf_FhE/maxresdefault.jpg)](https://www.youtube.com/watch?v=cGblISf_FhE)
+
 
 ## ✨ Features
 
