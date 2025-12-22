@@ -13,6 +13,11 @@ A comprehensive movie recommendation system that suggests similar movies based o
 
 [![Watch the Demo](https://img.youtube.com/vi/cGblISf_FhE/maxresdefault.jpg)](https://www.youtube.com/watch?v=cGblISf_FhE)
 
+🔗 **Live Project:**  
+👉 https://movie-recommendation-frontend-qpq8.onrender.com/
+
+> Deployed frontend for real-time movie recommendations using a React-based UI connected to a Flask ML backend.
+
 
 ## ✨ Features
 
