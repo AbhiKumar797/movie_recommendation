@@ -5,6 +5,8 @@ import MovieCard from './components/MovieCard';
 import Header from './components/Header';
 import Spinner from './components/Spinner'; // Import Spinner
 
+const API_URL = 'https://movie-recommendation-api-sldt.onrender.com';
+
 function App() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState('');
@@ -14,7 +16,7 @@ function App() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios.get('/api/movies')
+    axios.get(`${API_URL}/api/movies`)
       .then(response => {
         setMovies(response.data.movies);
       })
@@ -37,7 +39,7 @@ function App() {
     setSelectedMovie(movieToRecommend); // Ensure selected movie is updated
 
     try {
-      const response = await axios.post('/api/recommend', {
+      const response = await axios.post(`${API_URL}/api/recommend`, {
         movie: movieToRecommend,
         count: numRecommendations
       });
