@@ -10,6 +10,5 @@ venv/
 # VS Code
 .vscode/
 
-# Large model files
-model/similarity.pkl
-model/movie_list.pkl
+# Node modules
+node_modules/
